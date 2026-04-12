@@ -1,0 +1,135 @@
+// break-points
+$bp-mobile-middle: 23.75rem; // 380px
+$bp-mobile-screen: 33.75rem; // 540px
+$bp-small-screen: 42.25rem; // 675px
+$bp-smaller-mid-screen: 51rem; // 816px
+$bp-mid-screen: 59.375rem; // 950px
+$bp-big-screen: 67.5rem; // 1080px
+$bp-large-screen: 84.375rem; // 1350px
+$bp-4k-screen: 100rem; // 1400px
+
+// general variables
+$general-width: 80%;
+$margin-between-sections: 10rem;
+
+$font-size-small: 1.4rem;
+$font-size-normal: 1.6rem;
+$font-size-mid: 2rem;
+$font-size-big: 2.4rem;
+$font-size-huge: 3.2rem;
+$font-size-the-biggest: 4rem;
+
+// Colors
+$background-color: #f9f9f9;
+$font-color: #333;
+
+$dark-green: #0b9567;
+$primary-green: #10b981;
+$primary-light: #d1fae5;
+
+$gray: #e0e3eb;
+$grey-mid: #888b97;
+$grey-dark: #626687;
+
+$blurred-circle-color-1: rgba(130, 255, 210, 1);
+$blurred-circle-color-2: rgba(130, 247, 255, 1);
+$blurred-circle-color-3: rgba(255, 152, 130, 1);
+$blurred-circle-color-4: rgba(255, 250, 130, 1);
+
+$small-caption-color: #f59e0b;
+
+// Nav Variables
+$nav-margin-top: 3.2rem;
+
+$nav-logo-width: 11.5rem;
+$nav-logo-height: 3.6rem;
+
+$nav-font-size: 1.4rem;
+
+$nav-list-width: 52rem;
+$nav-list-height: 4.8rem;
+
+$nav-links-width: 10.2rem;
+$nav-links-height: 3.5rem;
+
+$nav-dropdown-width: 12.6rem;
+
+$nav-sign-up-width: 11.8rem;
+$nav-sign-up-height: 4.8rem;
+
+// welcome Variables
+$welcome-width: 49.6rem;
+$welcome-width-mobile: 80%;
+$welcome-height: 43.8rem;
+
+$welcome-input-height: 5.6rem;
+
+$welcome-icon-width: 1.7rem;
+$welcome-icon-height: 2rem;
+
+$welcome-button-width: 15rem;
+$welcome-button-height: 4.8rem;
+
+$scroll-left-large: 7vw;
+$scroll-left-very-big: 20vw;
+$scroll-left-big: 15.5vw;
+$scroll-left-mid-big: 5vw;
+
+$card-height: 10.4rem;
+
+$avatar-size: 5.6rem;
+
+$avatar-left: 2.9rem;
+
+$card-border-radius: 32px;
+
+// recommendations
+$arrow-size: 4.8rem;
+
+$house-width: 37.6rem;
+$house-height: 38.2rem;
+
+$avatar-rec-size: 4rem;
+
+$rec-hot-background-color: #fee2e2;
+$rec-hot-font-color: #ef4444;
+
+$rec-new-background-color: #dbeafe;
+$rec-new-font-color: #1d4ed8;
+
+$rec-best-offer-background-color: #d1fae5;
+$rec-best-offer-font-color: #0b9567;
+
+// tour
+$tour-icon-size: 3.2rem;
+$tour-text-details-width: 41.3rem;
+$tour-avatar-size: 5.6rem;
+
+$tour-contact-button-width: 17.1rem;
+$tour-contact-button-height: 4.8rem;
+
+$tour-icon-phone-size: 2.5rem;
+$tour-seller-text-left-margin: 0.7rem;
+
+$tour-play-button-size: 4.8rem;
+$tour-play-button-color: rgba(255, 255, 255, 0.5);
+
+$tour-play-size: 1.8rem;
+$tour-play-color: rgba(255, 255, 255, 0.8);
+$tour-play-button-blur: 5;
+
+// subscribe
+$subscribe-avatar-size: 3.6rem;
+
+$subscribe-picture-1-size: 8.1rem;
+$subscribe-picture-2-size: 5.4rem;
+$subscribe-picture-3-size: 7rem;
+$subscribe-picture-4-size: 5.5rem;
+
+$subscribe-background-color: rgba(141, 183, 247);
+
+$subscribe-icon-width: 2rem;
+$subscribe-icon-height: 1.6rem;
+
+// form 
+$form-shadow-color: rgba(12, 21, 55, 0.09);

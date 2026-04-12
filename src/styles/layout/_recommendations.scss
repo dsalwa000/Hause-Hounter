@@ -1,0 +1,227 @@
+@use "../abstracts/variables" as v;
+@use "../abstracts/mixins" as m;
+
+.recommendations {
+  width: 100%;
+
+  margin-bottom: v.$margin-between-sections;
+
+  &__menu-container {
+    position: relative;
+
+    width: v.$general-width;
+
+    margin: 1.6rem auto 0 auto;
+  }
+
+  &__line {
+    @include m.gold-caption-line;
+  }
+
+  &__small-caption {
+    @include m.gold-caption-text;
+  }
+
+  // menu
+  &__menu {
+    @include m.flex-row-space-between;
+
+    @media only screen and (max-width: v.$bp-mid-screen) {
+      flex-direction: column;
+    }
+  }
+
+  &__buttons {
+    @include m.flex-row-space-between;
+
+    gap: 0.8rem;
+
+    @media only screen and (max-width: v.$bp-mid-screen) {
+      flex-direction: column;
+    }
+  }
+
+  &__header {
+    font-size: v.$font-size-huge;
+  }
+
+  &__button {
+    @include m.flex-center-row;
+
+    gap: 0.8rem;
+
+    font-size: v.$font-size-small;
+
+    padding: 1.2rem 2.4rem;
+
+    background-color: white;
+
+    border: v.$dark-green solid 1px;
+    border-radius: 100px;
+
+    cursor: pointer;
+
+    &:active {
+      outline: none;
+      border: none;
+    }
+  }
+
+  &--active {
+    background-color: v.$primary-light;
+  }
+
+  // arrows
+  &__arrows {
+    @include m.flex-row-space-between;
+
+    gap: 0.8rem;
+
+    @media only screen and (max-width: v.$bp-mid-screen) {
+      justify-content: center;
+
+      margin-top: 3rem;
+    }
+  }
+
+  &__arrow-left {
+    @include m.arrow-container;
+
+    background-color: white;
+
+    &::before {
+      @include m.arrow-left;
+
+      border-color: v.$dark-green;
+    }
+  }
+
+  &__arrow-right {
+    @include m.arrow-container;
+
+    background-color: white;
+
+    &::before {
+      @include m.arrow-right;
+
+      border-color: v.$dark-green;
+    }
+  }
+
+  &--arrow-active {
+    background-color: v.$primary-green;
+
+    &::before {
+      border-color: white;
+    }
+  }
+
+  // houses
+  &__houses {
+    @include m.remove-scrollbar;
+
+    display: flex;
+    gap: 2.4rem;
+    margin-top: 2.4rem;
+
+    width: 100%;
+
+    overflow-x: scroll;
+  }
+
+  &__scroll {
+    display: flex;
+    gap: 2.4rem;
+
+    margin-left: 10%;
+  }
+
+  &__image-container {
+    position: relative;
+  }
+
+  &__offer-type {
+    @include m.flex-center-row;
+    gap: 0.8rem;
+
+    position: absolute;
+    left: 5%;
+    bottom: 5%;
+
+    padding: 0.8rem 1rem;
+
+    border-radius: 32px;
+  }
+
+  &--hot {
+    color: v.$rec-hot-font-color;
+    background-color: v.$rec-hot-background-color;
+  }
+
+  &--new {
+    color: v.$rec-new-font-color;
+    background-color: v.$rec-new-background-color;
+  }
+
+  &--best-offer {
+    color: v.$rec-best-offer-font-color;
+    background-color: v.$rec-best-offer-background-color;
+  }
+
+  &__type {
+    font-size: v.$font-size-small;
+  }
+
+  &__house {
+    // There is no house class alone
+
+    &-image {
+      width: v.$house-width;
+      height: v.$house-height;
+
+      border-radius: 24px;
+    }
+
+    &-name {
+      font-size: v.$font-size-big;
+      font-weight: 500;
+    }
+
+    &-price {
+      color: v.$grey-dark;
+      font-size: v.$font-size-mid;
+      font-weight: 500;
+
+      margin-bottom: 1.6rem;
+    }
+  }
+
+  &__owner {
+    display: flex;
+    align-items: center;
+    gap: 1.6rem;
+  }
+
+  &__avatar {
+    width: v.$avatar-rec-size;
+    height: v.$avatar-rec-size;
+
+    border-radius: 50%;
+  }
+
+  &__information {
+    display: flex;
+    flex-direction: column;
+  }
+
+  &__name {
+    font-size: 1.8rem;
+    font-weight: 500;
+  }
+
+  &__localisation {
+    color: v.$grey-mid;
+    font-size: v.$font-size-small;
+    font-weight: 400;
+  }
+}

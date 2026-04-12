@@ -1,0 +1,657 @@
+<!DOCTYPE html>
+<!-- lang in the html! -->
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Landing Page</title>
+
+    <link rel="stylesheet" href="styles/main.scss" />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Lexend:wght@100..900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <header id="site-header" class="site-header">
+      <div class="site-header__blurred-circle-1"></div>
+      <div class="site-header__blurred-circle-2"></div>
+
+      <div class="site-header__background-container">
+        <img class="site-header__background-img" src="./images/background-img.png" />
+
+        <div class="site-header__scroll" id="site-header-scroll">
+          <ul class="site-header__cards">
+            <li class="site-header__card site-header--card-1">
+              <div class="site-header__avatars">
+                <img class="site-header__avatar" src="./images/avatars/avatar-1.jpeg" />
+                <img class="site-header__avatar" src="./images/avatars/avatar-2.jpeg" />
+                <img class="site-header__avatar" src="./images/avatars/avatar-3.jpeg" />
+              </div>
+
+              <div class="site-header__caption">
+                <p class="site-header__caption-big">1K+ People</p>
+                <p class="site-header__caption-small">Successfully Getting Home</p>
+              </div>
+            </li>
+
+            <li class="site-header__card site-header--card-2">
+              <img class="site-header__mansion-circle" src="./images/avatars/mansion-avatar.png" />
+
+              <div class="site-header__caption">
+                <p class="site-header__caption-big">56 Houses</p>
+                <p class="site-header__caption-small">Sold Monthly</p>
+              </div>
+            </li>
+
+            <li class="site-header__card site-header--card-3">
+              <img class="site-header__avatar" src="./images/avatars/avatar-4.jpeg" />
+
+              <div class="site-header__caption">
+                <p class="site-header__caption-big">4K+</p>
+                <p class="site-header__caption-small">People Looking for New Homes</p>
+              </div>
+            </li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="site-header__arrow-down" id="arrow-down"></div>
+
+      <nav class="site-header__nav-mobile">
+        <img class="site-header__nav-mobile-logo" src="./images/Logo.png" />
+
+        <ul class="site-header__nav-mobile-list" id="nav-mobile-list">
+          <li class="site-header__nav-mobile-item">
+            <a class="site-header__nav-mobile-link" href="#about">About Us</a>
+          </li>
+          <li class="site-header__nav-mobile-item">
+            <a class="site-header__nav-mobile-link" href="#services">Article</a>
+          </li>
+          <li class="site-header__nav-mobile-dropdown">
+            <select id="dropdown-select" class="site-header__nav-mobile-select">
+              <option value="/No Value" selected>Property</option>
+              <option value="/#linkThere">Go there</option>
+              <option value="/#linkSomewhere">Go Somewhere</option>
+            </select>
+          </li>
+          <li class="site-header__nav-mobile-sign-up">
+            <a class="site-header__nav-mobile-sign-up-link" href="#contact">Sign Up</a>
+          </li>
+        </ul>
+      </nav>
+
+      <nav class="site-header__nav">
+        <img class="site-header__nav-logo" src="./images/Logo.png" />
+
+        <ul class="site-header__nav-list">
+          <li class="site-header__nav-item">
+            <a class="site-header__nav-link" href="#about">About Us</a>
+          </li>
+          <li class="site-header__nav-item">
+            <a class="site-header__nav-link" href="#services">Article</a>
+          </li>
+          <li class="site-header__nav-dropdown">
+            <select id="dropdown-select" class="site-header__nav-dropdown-select">
+              <option value="/No Value" selected>Property</option>
+              <option value="/#linkThere">Go there</option>
+              <option value="/#linkSomewhere">Go Somewhere</option>
+            </select>
+          </li>
+          <li class="site-header__nav-sign-up">
+            <a class="site-header__nav-sign-up-link" href="#contact">Sign Up</a>
+          </li>
+        </ul>
+      </nav>
+    </header>
+
+    <section class="welcome" id="welcome">
+      <div class="welcome__container">
+        <h1 class="welcome__heading welcome--heading">
+          Find The Place To<br />Live <span class="text-primary">Your Dreams</span> Easily Here
+        </h1>
+        <h1 class="welcome__heading welcome--heading-mobile">
+          Find The Place To Live <br />
+          <span class="text-primary">Your Dreams</span> Easily Here
+        </h1>
+
+        <p class="welcome__text welcome--text">
+          Everything you need about finding your place to live will be here, where it will be easier for you
+        </p>
+        <p class="welcome__text welcome--text-mobile">
+          Everything you need about finding your place to live will be here,
+          <br />
+          where it will be easier for you
+        </p>
+
+        <form class="welcome__form" action="/#" method="POST">
+          <input
+            class="welcome__input"
+            type="text"
+            id="place"
+            name="place"
+            placeholder="Search for the location you want!"
+            aria-label="type localization"
+            required
+          />
+          <button class="welcome__button" type="submit">Search</button>
+        </form>
+        <div class="welcome__partners-container">
+          <p class="welcome__text-partnership">Our Partnership</p>
+          <div class="welcome__partner-logos">
+            <img class="welcome__partner-logo" src="./images/partner-logos/traveloka_logo_2.png" />
+            <img class="welcome__partner-logo" src="./images/partner-logos/traveloka_logo_3.png" />
+            <img class="welcome__partner-logo" src="./images/partner-logos/traveloka_logo_4.png" />
+            <img class="welcome__partner-logo" src="./images/partner-logos/traveloka_logo_5.png" />
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="recommendations" id="recommendations">
+      <div class="recommendations__menu-container">
+        <hr class="recommendations__line" />
+        <p class="recommendations__small-caption">Our Recommendation</p>
+
+        <div class="recommendations__menu">
+          <h2 class="recommendations__header">Featured House</h2>
+          <div class="recommendations__buttons" id="recommendations-buttons">
+            <button class="recommendations__button recommendations--active" id="button-house" data-type="house">
+              <img src="./images/icons/icon-house.png" /> House
+            </button>
+
+            <button class="recommendations__button" id="button-villa" data-type="villa">
+              <img src="./images/icons/icon-villa.png" /> Villa
+            </button>
+
+            <button class="recommendations__button" id="button-apartment" data-type="apartment">
+              <img src="./images/icons/icon-apartment.png" /> Apartment
+            </button>
+          </div>
+          <div class="recommendations__arrows">
+            <button class="recommendations__arrow-left" id="slide-left"></button>
+            <button class="recommendations__arrow-right recommendations--arrow-active" id="slide-right"></button>
+          </div>
+        </div>
+      </div>
+
+      <div class="recommendations__houses" id="recommendations-houses">
+        <div class="recommendations__scroll" id="recommendations-scroll">
+          <div class="recommendations__house-container" data-type="villa">
+            <div class="recommendations__image-container">
+              <div class="recommendations__offer-type recommendations--hot">
+                <img class="recommendations__icon" src="images/icons/icon-hot.png" />
+                <p class="recommendations__type">Popular</p>
+              </div>
+              <picture>
+                <source srcset="./images/houses/house-1.webp" type="image/webp" />
+                <img
+                  class="recommendations__house-image"
+                  src="./images/houses/house-1.png"
+                  loading="lazy"
+                  alt="big house"
+                />
+              </picture>
+            </div>
+            <h2 class="recommendations__house-name">Roselands House</h2>
+            <p class="recommendations__house-price">$ 35.000.000</p>
+
+            <div class="recommendations__owner">
+              <img class="recommendations__avatar" src="./images/avatars/avatar-5.jpeg" />
+              <div class="recommendations__information">
+                <h3 class="recommendations__name">Dianne Russell</h3>
+                <p class="recommendations__localisation">Manchester, Kentucky</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="recommendations__house-container">
+            <div class="recommendations__image-container">
+              <div class="recommendations__offer-type recommendations--new">
+                <img class="recommendations__icon" src="images/icons/icon-house-blue.png" />
+                <p class="recommendations__type">New house</p>
+              </div>
+              <picture>
+                <source srcset="./images/houses/house-2.webp" type="image/webp" />
+                <img
+                  class="recommendations__house-image"
+                  src="./images/houses/house-2.png"
+                  loading="lazy"
+                  alt="big ugly house"
+                />
+              </picture>
+            </div>
+            <h2 class="recommendations__house-name">Woodlandside</h2>
+            <p class="recommendations__house-price">$ 20.000.000</p>
+
+            <div class="recommendations__owner">
+              <img class="recommendations__avatar" src="./images/avatars/avatar-6.jpeg" />
+              <div class="recommendations__information">
+                <h3 class="recommendations__name">Robert Fox</h3>
+                <p class="recommendations__localisation">Dr. San Jose, South Dakota</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="recommendations__house-container" data-type="apartment">
+            <div class="recommendations__image-container">
+              <div class="recommendations__offer-type recommendations--best-offer">
+                <img class="recommendations__icon" src="images/icons/icon-wallet.png" />
+                <p class="recommendations__type">Popular</p>
+              </div>
+              <picture>
+                <source srcset="./images/houses/house-3.webp" type="image/webp" />
+                <img
+                  class="recommendations__house-image"
+                  src="./images/houses/house-3.png"
+                  loading="lazy"
+                  alt="pretty nice apartment"
+                />
+              </picture>
+            </div>
+            <h2 class="recommendations__house-name">The Old Lighthouse</h2>
+            <p class="recommendations__house-price">$ 44.000.000</p>
+
+            <div class="recommendations__owner">
+              <img class="recommendations__avatar" src="./images/avatars/avatar-7.jpeg" />
+              <div class="recommendations__information">
+                <h3 class="recommendations__name">Ronald Richards</h3>
+                <p class="recommendations__localisation">Santa Ana, Illinois</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="recommendations__house-container" data-type="villa">
+            <div class="recommendations__image-container">
+              <div class="recommendations__offer-type recommendations--hot">
+                <img class="recommendations__icon" src="images/icons/icon-hot.png" />
+                <p class="recommendations__type">Popular</p>
+              </div>
+              <picture>
+                <source srcset="./images/houses/house-4.webp" type="image/webp" />
+                <img
+                  class="recommendations__house-image"
+                  src="./images/houses/house-4.png"
+                  loading="lazy"
+                  alt="house with some vibe"
+                />
+              </picture>
+            </div>
+            <h2 class="recommendations__house-name">Cosmo's House</h2>
+            <p class="recommendations__house-price">$ 22.000.000</p>
+
+            <div class="recommendations__owner">
+              <img class="recommendations__avatar" src="./images/avatars/avatar-3.jpeg" />
+              <div class="recommendations__information">
+                <h3 class="recommendations__name">Jenny Wilson</h3>
+                <p class="recommendations__localisation">Preston Rd. Inglewood, Maine 98380</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="recommendations__house-container">
+            <div class="recommendations__image-container">
+              <div class="recommendations__offer-type recommendations--new">
+                <img class="recommendations__icon" src="images/icons/icon-house-blue.png" />
+                <p class="recommendations__type">New house</p>
+              </div>
+              <picture>
+                <source srcset="./images/houses/house-2.webp" type="image/webp" />
+                <img
+                  class="recommendations__house-image"
+                  src="./images/houses/house-2.png"
+                  loading="lazy"
+                  alt="pretty nice apartment"
+                />
+              </picture>
+            </div>
+            <h2 class="recommendations__house-name">Woodlandside</h2>
+            <p class="recommendations__house-price">$ 20.000.000</p>
+
+            <div class="recommendations__owner">
+              <img class="recommendations__avatar" src="./images/avatars/avatar-6.jpeg" />
+              <div class="recommendations__information">
+                <h3 class="recommendations__name">Robert Fox</h3>
+                <p class="recommendations__localisation">Dr. San Jose, South Dakota</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="recommendations__house-container">
+            <div class="recommendations__image-container">
+              <div class="recommendations__offer-type recommendations--new">
+                <img class="recommendations__icon" src="images/icons/icon-house-blue.png" />
+                <p class="recommendations__type">New house</p>
+              </div>
+              <picture>
+                <source srcset="./images/houses/house-2.webp" type="image/webp" />
+                <img
+                  class="recommendations__house-image"
+                  src="./images/houses/house-2.png"
+                  loading="lazy"
+                  alt="pretty nice apartment"
+                />
+              </picture>
+            </div>
+            <h2 class="recommendations__house-name">Woodlandside</h2>
+            <p class="recommendations__house-price">$ 20.000.000</p>
+
+            <div class="recommendations__owner">
+              <img class="recommendations__avatar" src="./images/avatars/avatar-6.jpeg" />
+              <div class="recommendations__information">
+                <h3 class="recommendations__name">Robert Fox</h3>
+                <p class="recommendations__localisation">Dr. San Jose, South Dakota</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="recommendations__house-container">
+            <div class="recommendations__image-container">
+              <div class="recommendations__offer-type recommendations--new">
+                <img class="recommendations__icon" src="images/icons/icon-house-blue.png" />
+                <p class="recommendations__type">New house</p>
+              </div>
+              <picture>
+                <source srcset="./images/houses/house-2.webp" type="image/webp" />
+                <img
+                  class="recommendations__house-image"
+                  src="./images/houses/house-2.png"
+                  loading="lazy"
+                  alt="pretty nice apartment"
+                />
+              </picture>
+            </div>
+            <h2 class="recommendations__house-name">Woodlandside</h2>
+            <p class="recommendations__house-price">$ 20.000.000</p>
+
+            <div class="recommendations__owner">
+              <img class="recommendations__avatar" src="./images/avatars/avatar-6.jpeg" />
+              <div class="recommendations__information">
+                <h3 class="recommendations__name">Robert Fox</h3>
+                <p class="recommendations__localisation">Dr. San Jose, South Dakota</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="recommendations__house-container">
+            <div class="recommendations__image-container">
+              <div class="recommendations__offer-type recommendations--new">
+                <img class="recommendations__icon" src="images/icons/icon-house-blue.png" />
+                <p class="recommendations__type">New house</p>
+              </div>
+              <picture>
+                <source srcset="./images/houses/house-2.webp" type="image/webp" />
+                <img
+                  class="recommendations__house-image"
+                  src="./images/houses/house-2.png"
+                  loading="lazy"
+                  alt="pretty nice apartment"
+                />
+              </picture>
+            </div>
+            <h2 class="recommendations__house-name">Woodlandside</h2>
+            <p class="recommendations__house-price">$ 20.000.000</p>
+
+            <div class="recommendations__owner">
+              <img class="recommendations__avatar" src="./images/avatars/avatar-6.jpeg" />
+              <div class="recommendations__information">
+                <h3 class="recommendations__name">Robert Fox</h3>
+                <p class="recommendations__localisation">Dr. San Jose, South Dakota</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="tour" id="tour">
+      <div class="tour__blurred-circle-1"></div>
+      <div class="tour__blurred-circle-2"></div>
+      <div class="tour__container">
+        <div class="tour__information">
+          <hr class="tour__line" />
+          <p class="tour__small-caption">Ready to sell!</p>
+          <h2 class="tour__header">Let's Tour And See Our House!</h2>
+          <p class="tour__text">
+            Houses recommended by our partners that have been curated to become the home of your dreams!
+          </p>
+          <h3 class="tour__details-heading">House Detail</h3>
+          <div class="tour__details">
+            <div class="tour__detail">
+              <img class="tour__detail-icon" src="./images/icons/icon-bed.png" />
+              <p class="tour__detail-text">4 Bedrooms</p>
+            </div>
+            <div class="tour__detail">
+              <img class="tour__detail-icon" src="./images/icons/icon-bathroom.png" />
+              <p class="tour__detail-text">2 Bathrooms</p>
+            </div>
+            <div class="tour__detail">
+              <img class="tour__detail-icon" src="./images/icons/icon-carport.png" />
+              <p class="tour__detail-text">1 Carport</p>
+            </div>
+            <div class="tour__detail">
+              <img class="tour__detail-icon" src="./images/icons/icon-stairs.png" />
+              <p class="tour__detail-text">2 Floors</p>
+            </div>
+          </div>
+          <hr class="tour__line-long" />
+          <div class="tour__seller">
+            <img class="tour__avatar" src="images/avatars/avatar-5.jpeg" />
+            <div class="tour__seller-information">
+              <h3 class="tour__name">Dianne Russell</h3>
+              <p class="tour__localisation">Manchester, Kentucky</p>
+            </div>
+            <button class="tour__seller-contact">
+              <img class="tour__icon-phone" src="images/icons/icon-phone.png" />
+              <p class="tour__button-text">Contact Now</p>
+            </button>
+          </div>
+        </div>
+        <div class="tour__collage" id="tour-collage">
+          <div class="tour__image-big-container">
+            <div class="tour__play-button" id="play-button"></div>
+            <img class="tour__image tour__image-big" src="images/collage/image-big.png" id="tour-video-placeholder" />
+            <video class="tour__video" id="video">
+              <source src="images/house-video.mp4" type="video/mp4" />
+              Twoja przeglądarka nie wspiera odtwarzania tego wideo.
+            </video>
+          </div>
+          <img
+            class="tour__image tour__image-mid"
+            id="image-mid"
+            data-translate-value="-30rem"
+            src="images/collage/image-mid.png"
+          />
+          <img
+            class="tour__image tour__image-small tour--image-small-first"
+            id="image-small-1"
+            data-translate-value="25rem"
+            src="images/collage/image-small-1.png"
+          />
+          <img
+            class="tour__image tour__image-small tour--image-small-second"
+            id="image-small-2"
+            data-translate-value="25rem"
+            src="images/collage/image-small-2.png"
+          />
+        </div>
+      </div>
+    </section>
+
+    <section class="subscribe" id="subscribe">
+      <div class="subscribe__container" id="subscribe-container">
+        <div class="subscribe__collage" id="collage-one">
+          <div class="subscribe__column">
+            <img
+              class="subscribe__collage-picture subscribe--picture-1 move-right"
+              src="images/collage-subscribe/chair-1.jpeg"
+            />
+            <img class="subscribe__collage-avatar subscribe--avatar-1 move-right" src="images/avatars/avatar-3.jpeg" />
+          </div>
+          <div class="subscribe__column">
+            <img class="subscribe__collage-avatar subscribe--avatar-2 move-right" src="images/avatars/avatar-6.jpeg" />
+            <img
+              class="subscribe__collage-picture subscribe--picture-2 move-right"
+              src="images/collage-subscribe/house-1.jpeg"
+            />
+          </div>
+        </div>
+
+        <div class="subscribe__type-email">
+          <h2 class="subscribe__heading" id="subscribe-heading">Subscribe For More Info And Update From Hounter</h2>
+          <form class="subscribe__form" id="subscribe-form" method="POST">
+            <div class="subscribe__loader" id="subscribe-loader"></div>
+            <input class="subscribe__input" type="email" placeholder="Your email here" required />
+            <button type="submit" class="subscribe__button" id="subscribe-button">Subscribe Now</button>
+          </form>
+        </div>
+
+        <div class="subscribe__collage" id="collage-two">
+          <div class="subscribe__column" id="column-three">
+            <img
+              class="subscribe__collage-picture subscribe--picture-3 move-left"
+              src="images/collage-subscribe/chair-2.jpeg"
+            />
+            <img class="subscribe__collage-avatar subscribe--avatar-3 move-left" src="images/avatars/avatar-8.jpeg" />
+          </div>
+          <div class="subscribe__column" id="column-four">
+            <img class="subscribe__collage-avatar subscribe--avatar-4 move-left" src="images/avatars/avatar-9.jpeg" />
+            <img
+              class="subscribe__collage-picture subscribe--picture-4 move-left"
+              src="images/collage-subscribe/house-2.jpeg"
+            />
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="form" id="form">
+      <div class="form__container">
+        <div class="form__information">
+          <h2 class="form__question">Would You Like To Join Us</h2>
+          <p class="form__text">Quickly get three quotes from these local that people love in online reviews.</p>
+          <hr class="form__line" />
+          <p class="form__text">Pick the whose estimate suits you best.</p>
+          <hr class="form__line" />
+          <p class="form__text">We then make sure the work i done to your complete satisfaction.</p>
+          <img class="form__img" src="./images/form-image.png" />
+        </div>
+
+        <div class="form__form-container">
+          <form class="form__form" action="/#" method="POST" id="contact-form">
+            <div class="form__input-text-container">
+              <label class="form__label-text" for="name">Name</label>
+              <input class="form__input-text" type="text" name="name" id="name" placeholder="Your Name" required />
+            </div>
+            <div class="form__input-text-container">
+              <label class="form__label-text" for="surname">Surname</label>
+              <input
+                class="form__input-text"
+                type="text"
+                name="surname"
+                id="surname"
+                placeholder="Your Surname"
+                required
+              />
+            </div>
+            <div class="form__select-container">
+              <label class="form__label-select" for="education">Education</label>
+              <select class="form__select" name="education" id="form-select" required>
+                <option value="" selected>Select One</option>
+                <option value="Hogwart">Hogwart</option>
+                <option value="Marynarka Wojenna">Marynarka Wojenna</option>
+              </select>
+            </div>
+            <div class="form__input-text-area-container">
+              <label class="form__label-text-area" for="message">Message</label>
+              <p class="form__counter" id="counter"></p>
+              <textarea
+                class="form__input-text-area"
+                id="form-message"
+                name="message"
+                rows="3"
+                placeholder="Message"
+                maxlength="20"
+                required
+              ></textarea>
+            </div>
+            <div class="form__input-checkbox-container">
+              <div class="form__grid-empty-space"></div>
+              <div class="form__checkbox-internal-container">
+                <input class="form__checkbox" type="checkbox" id="consent" name="consent" required />
+                <label class="form__label-checkbox" for="consent"
+                  >I give consent to the processing of my personal data given in the contact form above under the terms
+                  and conditions of Grid Dynamics Privacy Policy.</label
+                >
+              </div>
+            </div>
+            <div class="form__input-checkbox-container">
+              <div class="form__grid-empty-space"></div>
+              <button class="form__button" id="form-button" type="submit">Submit Form</button>
+            </div>
+          </form>
+        </div>
+      </div>
+    </section>
+
+    <div style="height: 5rem"></div>
+
+    <footer class="footer" id="footer">
+      <div class="footer__contact">
+        <img class="footer__logo" src="./images/Logo.png" />
+        <p class="footer__text">
+          We provide information about properties such as houses, villas and apartments to help people find their dream
+          home
+        </p>
+        <div class="footer__social">
+          <a href="https://www.facebook.com/" class="footer__link"
+            ><img class="footer__social-logo" src="./images/icons/icon-fb.png"
+          /></a>
+          <a href="https://x.com/" class="footer__link"
+            ><img class="footer__social-logo" src="./images/icons/icon-twitter.png"
+          /></a>
+          <a href="https://pl.pinterest.com/" class="footer__link"
+            ><img class="footer__social-logo" src="./images/icons/icon-pinterest.png"
+          /></a>
+        </div>
+      </div>
+      <div class="footer__grid-empty-space"></div>
+      <div class="footer__information">
+        <ul class="footer__list" id="footer-list-search">
+          <li class="footer__list-header">Property</li>
+          <li data-type="house" class="footer__list-element"><a href="/#recommendations">House</a></li>
+          <li data-type="apartment" class="footer__list-element"><a href="/#recommendations">Apartment</a></li>
+          <li data-type="villa" class="footer__list-element"><a href="/#recommendations">Villa</a></li>
+        </ul>
+        <ul class="footer__list">
+          <li class="footer__list-header">Article</li>
+          <li class="footer__list-element"><a href="#" class="footer__link">New Article</a></li>
+          <li class="footer__list-element"><a href="#" class="footer__link">Popular Article</a></li>
+          <li class="footer__list-element"><a href="#" class="footer__link">Most Read</a></li>
+          <li class="footer__list-element"><a href="#" class="footer__link">Tips & Tricks</a></li>
+        </ul>
+        <address class="footer__list">
+          <a class="footer__list-header">Contact</a>
+          <a href="https://maps.app.goo.gl/QrEtcrULGAmCWbvL6" class="footer__list-element"
+            >2464 Royal Ln. Mesa, New Jersey 45463</a
+          >
+          <a href="tel:(671) 555-0110" class="footer__list-element">(671) 555-0110</a>
+          <a href="mailto: info@hounter.com" class="footer__list-element">info@hounter.com</a>
+        </address>
+      </div>
+    </footer>
+
+    <div class="cookies" id="cookies">
+      <div class="cookies__left-side">
+        <img class="cookies__icon" src="./images/icons/icon-cookie.png" />
+        <p class="cookies__text">We are using cookies</p>
+      </div>
+      <img class="cookies__close" id="cookies-close" src="./images/icons/icon-close.png" />
+    </div>
+
+    <script src="./scripts/main.ts" type="module"></script>
+  </body>
+</html>

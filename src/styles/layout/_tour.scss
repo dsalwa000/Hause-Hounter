@@ -1,0 +1,322 @@
+@use "../abstracts/variables" as v;
+@use "../abstracts/mixins" as m;
+
+.tour {
+  position: relative;
+
+  width: 100%;
+
+  margin-bottom: v.$margin-between-sections;
+
+  overflow-x: clip;
+
+  &__blurred-circle-1 {
+    @include m.blurred-circle;
+
+    opacity: 0.7;
+
+    top: -15rem;
+    right: -5rem;
+
+    background-color: v.$blurred-circle-color-3;
+  }
+
+  &__blurred-circle-2 {
+    @include m.blurred-circle;
+
+    opacity: 0.7;
+
+    top: -10rem;
+    right: -20rem;
+
+    background-color: v.$blurred-circle-color-4;
+  }
+
+  &__container {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+
+    position: relative;
+
+    width: v.$general-width;
+
+    margin: 1.6rem auto 0;
+
+    @media only screen and (max-width: v.$bp-mid-screen) {
+      grid-template-columns: 1fr;
+      justify-items: center;
+      gap: 4rem;
+
+      width: auto;
+    }
+  }
+
+  &__information {
+    display: grid;
+
+    @media only screen and (max-width: v.$bp-mid-screen) {
+      justify-items: center;
+    }
+  }
+
+  &__line {
+    @include m.gold-caption-line;
+
+    @media only screen and (max-width: v.$bp-small-screen) {
+      display: none;
+    }
+  }
+
+  &__small-caption {
+    @include m.gold-caption-text;
+
+    @media only screen and (max-width: v.$bp-mid-screen) {
+      justify-self: left;
+    }
+  }
+
+  &__header {
+    font-size: v.$font-size-huge;
+  }
+
+  &__text {
+    @include m.welcome-text;
+
+    width: v.$tour-text-details-width;
+
+    margin-bottom: 2rem;
+  }
+
+  &__details-heading {
+    font-size: v.$font-size-normal;
+    font-weight: 600;
+    line-height: 20px;
+
+    margin-bottom: 2rem;
+  }
+
+  &__details {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(2, 3.2rem);
+    gap: 1.6rem;
+
+    width: v.$tour-text-details-width;
+  }
+
+  &__detail {
+    display: grid;
+    grid-template-columns: 2fr 5fr;
+
+    position: relative;
+  }
+
+  &__detail-icon {
+    justify-self: left;
+
+    height: v.$tour-icon-size;
+    width: v.$tour-icon-size;
+  }
+
+  &__detail-text {
+    font-size: v.$font-size-normal;
+    font-weight: 500;
+    line-height: 20px;
+
+    justify-self: left;
+    align-self: center;
+  }
+
+  &__line-long {
+    color: v.$gray;
+
+    width: v.$tour-text-details-width;
+    height: 2px;
+
+    margin: 2rem 0;
+  }
+
+  &__seller {
+    display: grid;
+    grid-template-columns: 1fr 4fr 3fr;
+    align-items: center;
+
+    width: v.$tour-text-details-width;
+    height: 5.6rem;
+  }
+
+  &__avatar {
+    width: v.$tour-avatar-size;
+    height: v.$tour-avatar-size;
+
+    border-radius: 50%;
+  }
+
+  &__name {
+    font-size: 1.8rem;
+    font-weight: 500;
+
+    margin-left: v.$tour-seller-text-left-margin;
+  }
+
+  &__localisation {
+    color: v.$grey-mid;
+    font-size: v.$font-size-small;
+    font-weight: 400;
+
+    margin-left: v.$tour-seller-text-left-margin;
+  }
+
+  &__seller-information {
+    justify-self: left;
+  }
+
+  &__seller-contact {
+    color: white;
+    font-size: v.$font-size-small;
+    font-family: inherit;
+
+    display: grid;
+    grid-template-columns: 2fr 4fr;
+
+    background-color: v.$primary-green;
+
+    width: v.$tour-contact-button-width;
+    height: v.$tour-contact-button-height;
+
+    border: none;
+    outline: none;
+    border-radius: 100px;
+
+    cursor: pointer;
+  }
+
+  &__icon-phone {
+    justify-self: center;
+    align-self: center;
+
+    width: v.$tour-icon-phone-size;
+    height: v.$tour-icon-phone-size;
+  }
+
+  &__button-text {
+    justify-self: left;
+    align-self: center;
+  }
+
+  //collage
+  &__collage {
+    position: relative;
+    width: 52.8rem;
+    height: 45.9rem;
+
+    overflow-x: clip;
+  }
+
+  &__image-big-container {
+    position: absolute;
+    right: 0;
+
+    width: 47.8rem;
+    height: 41.6rem;
+
+    z-index: 1;
+
+    cursor: pointer;
+  }
+
+  &__play-button {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+
+    width: v.$tour-play-button-size;
+    height: v.$tour-play-button-size;
+
+    background-color: v.$tour-play-button-color;
+
+    border-radius: 50%;
+
+    z-index: 2;
+
+    &::before {
+      content: "";
+
+      position: absolute;
+      top: 50%;
+      left: 54%;
+      transform: translate(-50%, -50%);
+
+      width: v.$tour-play-size;
+      height: v.$tour-play-size;
+      height: 2rem;
+
+      background-color: v.$tour-play-color;
+
+      clip-path: polygon(0 0, 100% 50%, 0 100%);
+      filter: drop-shadow(0 0 10px rgba(0, 0, 0, 0.5));
+
+      z-index: 2;
+    }
+  }
+
+  &__image-big {
+    position: absolute;
+    right: 0;
+
+    width: 47.8rem;
+    height: 41.6rem;
+
+    z-index: 1;
+  }
+
+  &__video {
+    display: none;
+
+    object-fit: cover;
+
+    position: absolute;
+    right: 0;
+
+    width: 47.8rem;
+    height: 41.6rem;
+
+    z-index: 10;
+  }
+
+  &__image-mid {
+    position: absolute;
+    bottom: 0;
+
+    width: 29.6rem;
+    height: 16.8rem;
+
+    z-index: 2;
+
+    transition: transform 2s;
+  }
+
+  &__image-small {
+    width: 9.6rem;
+    height: 8rem;
+
+    border-radius: 8px;
+
+    z-index: 2;
+
+    transition: transform 2s;
+  }
+
+  &--image-small-first {
+    position: absolute;
+    bottom: 0;
+    right: 1rem;
+  }
+
+  &--image-small-second {
+    position: absolute;
+    bottom: 0;
+    right: calc(9.6rem + 1.5rem + 1rem);
+  }
+}

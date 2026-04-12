@@ -1,0 +1,90 @@
+@use '../abstracts/variables' as v;
+@use '../abstracts/mixins' as m;
+
+.footer {
+  display: grid;
+  grid-template-columns: 2fr 1fr 4fr;
+
+  width: v.$general-width;
+
+  margin-left: 10%;
+
+  @media only screen and (max-width: v.$bp-mobile-screen) {
+    grid-template-columns: 1fr;
+    align-items: center;
+  }
+
+  // 1st part
+  &__contact {
+    display: grid;
+    gap: 1rem;
+
+    max-height: 18rem;
+
+    @media only screen and (max-width: v.$bp-mobile-screen) {
+      justify-items: center;
+      gap: 3rem;
+    }
+  }
+
+  &__logo {
+    width: 11.5rem;
+    height: 3.6rem;
+  }
+
+  &__text {
+    font-size: v.$font-size-small;
+
+    @media only screen and (max-width: v.$bp-mobile-screen) {
+      text-align: center;
+    }
+  }
+
+  &__social {
+    display: grid;
+    grid-auto-flow: column;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 2.4rem;
+  }
+
+  &__social-logo {
+    max-width: 3.2rem;
+    max-height: 3.2rem;
+  }
+
+  // 2nd part
+  &__information {
+    display: grid;
+    grid-template-columns: 2fr 2fr 3fr;
+
+    @media only screen and (max-width: v.$bp-mobile-screen) {
+      grid-template-columns: 1fr;
+      justify-items: center;
+    }
+  }
+
+  &__list {
+    @media only screen and (max-width: v.$bp-mobile-screen) {
+      text-align: center;
+
+      margin-top: 4rem;
+    }
+  }
+
+  &__list-header {
+    @include m.footer-links;
+
+    color: black;
+    font-size: 1.8rem;
+    font-weight: 500;
+  }
+
+  &__list-element {
+    @include m.footer-links;
+
+    color: v.$grey-mid;
+    font-size: v.$font-size-small;
+    font-weight: 400;
+  }
+}

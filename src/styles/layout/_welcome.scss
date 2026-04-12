@@ -1,0 +1,183 @@
+@use "../abstracts/variables" as v;
+@use "../abstracts/mixins" as m;
+
+.welcome {
+  display: flex;
+
+  height: 57.6rem;
+
+  margin-left: 10%;
+  margin-bottom: v.$margin-between-sections;
+
+  @media only screen and (max-width: v.$bp-mid-screen) {
+    justify-content: center;
+    margin-left: 0;
+  }
+
+  &__container {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+
+    height: v.$welcome-height;
+    width: 100%;
+
+    @media only screen and (max-width: v.$bp-mid-screen) {
+      align-items: center;
+
+      width: 90%;
+    }
+  }
+
+  &__heading {
+    font-size: 4rem;
+    font-weight: 900;
+    line-height: 5rem;
+
+    width: v.$welcome-width;
+  }
+
+  &--heading {
+    @media only screen and (max-width: v.$bp-mid-screen) {
+      display: none;
+    }
+  }
+
+  &--heading-mobile {
+    display: none;
+
+    @media only screen and (max-width: v.$bp-mid-screen) {
+      text-align: center;
+
+      display: block;
+
+      width: auto;
+    }
+  }
+
+  &__text {
+    @include m.welcome-text;
+
+    @media only screen and (max-width: v.$bp-mid-screen) {
+      text-align: center;
+    }
+
+    &-partnership {
+      @include m.welcome-text;
+
+      color: v.$grey-mid;
+
+      @media only screen and (max-width: v.$bp-mid-screen) {
+        text-align: center;
+      }
+    }
+  }
+
+  &--text {
+    @media only screen and (max-width: v.$bp-mid-screen) {
+      display: none;
+    }
+  }
+
+  &--text-mobile {
+    display: none;
+
+    @media only screen and (max-width: v.$bp-mid-screen) {
+      display: block;
+    }
+  }
+
+  &__form {
+    position: relative;
+
+    width: v.$welcome-width;
+
+    @media only screen and (max-width: v.$bp-mid-screen) {
+      width: auto;
+      min-width: 52rem;
+      max-width: 75%;
+    }
+
+    &::before {
+      content: "";
+
+      display: block;
+
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      left: 1.8rem;
+
+      width: v.$welcome-icon-width;
+      height: v.$welcome-icon-height;
+
+      background-image: url(../images/loc.png);
+      background-size: cover;
+      background-repeat: no-repeat;
+
+      z-index: 100;
+    }
+  }
+
+  input[type="text"] {
+    font-family: inherit;
+    font-size: v.$font-size-small;
+    font-weight: 500;
+
+    padding-left: 4rem;
+  }
+
+  &__input {
+    width: 100%;
+    height: v.$welcome-input-height;
+
+    border: v.$gray solid 1px;
+    border-radius: 100px;
+  }
+
+  &__button {
+    color: white;
+    font-size: v.$font-size-small;
+    font-family: inherit;
+
+    position: absolute;
+    right: 0.5rem;
+    top: 50%;
+    transform: translateY(-50%);
+
+    background-color: v.$primary-green;
+
+    width: v.$welcome-button-width;
+    height: v.$welcome-button-height;
+
+    border: none;
+    outline: none;
+    border-radius: 100px;
+
+    &::after {
+      @include m.arrow-right;
+
+      margin-left: 1.6rem;
+    }
+  }
+
+  // Partner's logos
+  &__partners-container {
+    width: v.$welcome-width;
+
+    @media only screen and (max-width: v.$bp-mid-screen) {
+      text-align: center;
+    }
+  }
+
+  &__partner-logos {
+    display: flex;
+    justify-content: space-between;
+
+    width: v.$welcome-width;
+  }
+
+  &__partner-logo {
+    height: 6.4rem;
+  }
+}
